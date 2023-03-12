@@ -1,53 +1,55 @@
-<script>
-	import Header from './Header.svelte';
-	import './styles.css';
-</script>
-
-<div class="app">
-	<Header />
-
-	<main>
-		<slot />
-	</main>
-
-	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-	</footer>
-</div>
-
 <style>
-	.app {
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-	}
+    @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 64rem;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
+    * {
+        font-family: 'Raleway', sans-serif;
+    }
 
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
-	}
+    main {
+        padding: 0 10px
+    } 
 
-	footer a {
-		font-weight: bold;
-	}
+    /* nav {
+        width: 100%;
 
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
-	}
+        display: flex; 
+        justify-content: space-around; 
+        align-items: center; 
+
+        background-color: lightblue;
+        padding: 0 10px;
+    }
+
+    .logo {
+        width: 48px;
+    }
+
+    .nav-text {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    a, a:visited, a:active {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    } */
 </style>
+
+<!-- This is the navbar, currently not in use, maybe later is needed
+<nav>
+    <a class="nav-text nav-btn" href="/recepten">Recepten</a>
+    <a href="/">
+        <img class="logo" alt="ah_logo" src="ah_logo.png">
+    </a>
+    <a class="nav-text nav-btn" href="/info">Info</a>
+</nav> -->
+
+<br>
+
+<main>
+    <slot></slot>
+</main>
