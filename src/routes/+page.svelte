@@ -71,8 +71,7 @@
     }
 
     .home_img {
-        width: 80%;
-        margin-left: 10%;
+        width: 100%;
         margin-top: 10px;
         border-radius: 16px;
     }
