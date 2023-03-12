@@ -5,7 +5,7 @@
         font-family: 'Raleway', sans-serif;
     }
 
-    h1, h2, h3, h4 {
+    h1, h2, h3, h4, p {
         margin: 0;
     }
 
@@ -26,9 +26,22 @@
     }
 
     .subtitle {
-        margin-top: 30px;
+        margin-top: 45px;
         text-align: center;
         font-weight: 800;
+    }
+
+    .subsubtitle {
+        display:flex; 
+        justify-content: center;
+        align-items: center; 
+        gap: 10px; 
+
+        margin-top: 15px;
+        margin-bottom: 5px;
+        text-align: center;
+        font-weight: 700;
+        color: #ff7900;
     }
 
     .btn-recipe {
@@ -101,5 +114,25 @@
         <br> <br>
         Hier vind jij dus een lijst aan recepten voor het avond eten bij de Albert Heijn die goedgekeurd zijn door Wouter. De recepten ze bedoelt voor (kleine) groepjes, maar in je eentje kan bij sommigen ook! Wouter heeft ze natuurlijk niet allemaal zelf bedacht, de creativiteit van ander word altijd gewaardeerdt.
     </p>
+
+    <h2 class="subtitle">De recept garanties</h2>
+    <div class="subsubtitle">
+        <img src="carrot_icon.png" alt="carrot_icon">
+        <h3>Gezonder</h3>
+    </div>
+    <p>Door veel gebruik te maken van verse producten met minder zout en suiker dan de kant-en-klaar maaltijden.</p>
+
+    <div class="subsubtitle">
+        <img src="star_icon.png" alt="star_icon">
+        <h3>Variërend</h3>
+    </div>
+    <p>Veel verschillende soorten maaltijden, waarbij veel gebruik wordt gemaakt van verschillende groente, eiwitten en koolhydraten.</p>
+
+
+    <div class="subsubtitle">
+        <img src="leaf_icon.png" alt="leaf_icon">
+        <h3>Frisser</h3>
+    </div>
+    <p>Door het gebruik van bijvoorbeeld verse groente zijn deze maaltijden een stuk verser dan de meeste dingen die je bij de Appie zou eten.</p>
 </main>
 
