@@ -18,6 +18,13 @@
         padding: 0 5px;
     }
 
+    footer {
+        display: flex;
+        justify-content: center;
+        margin: 50px 0 20px 0;
+        padding: 0 5px; 
+    }
+
     .title {
         display:flex; 
         align-items: center; 
@@ -26,7 +33,7 @@
     }
 
     .subtitle {
-        margin-top: 45px;
+        margin-top: 50px;
         text-align: center;
         font-weight: 800;
     }
@@ -109,6 +116,7 @@
     <img src="home_img2.jpg" alt="home_img" class="home_img"> 
 
     <h2 class="subtitle">Over het kookboek</h2>
+    <br>
     <p>
         Het is best simpel. Wouter moest elke week avond eten bij de Appie, alleen vindt magnetron maaltijden niet lekker en wraps met kip 🐓 elke week gaat hij ook niet aan beginnen.
         <br> <br>
@@ -134,5 +142,10 @@
         <h3>Frisser</h3>
     </div>
     <p>Door het gebruik van bijvoorbeeld verse groente zijn deze maaltijden een stuk verser dan de meeste dingen die je bij de Appie zou eten.</p>
+ 
 </main>
+
+<footer>
+    <h3>Made with ❤️ by <a href="https://wouterpennings.com">Wouter Pennings</a></h3>
+</footer>
 
