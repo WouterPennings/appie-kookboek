@@ -12,6 +12,7 @@
 
     h4 {
         color: gray;
+        font-size: small;
     }
 
     main {
@@ -21,7 +22,7 @@
     }
 
     img {
-        width: 20px;
+        width: 15px;
     }
 
     label {
@@ -65,7 +66,8 @@
     }
 
     .card_img {
-        width: 140px;
+        width: 130px;
+        height: auto;
         border-radius: 16px;
         box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.185);
     }
@@ -82,7 +84,7 @@
     <img class="card_img" src={recipe.img_path[0]} alt={recipe.img_path[0]}>
     <div class="info">
         <div>
-            <h2>{recipe.name}</h2>
+            <h3>{recipe.name}</h3>
             <h4>{recipe.inventors.join(", ")}</h4>
         </div>
 
