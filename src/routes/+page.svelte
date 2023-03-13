@@ -67,6 +67,10 @@
     }
 </style>
 
+<svelte:head>
+   <title>Appie Kookboek</title>
+</svelte:head>
+
 <h3 style="text-align: start;">De lekkerste recepten voor tijdens de avond pauze!</h3>
 
 <a class="btn-recipe" href="/recepten">

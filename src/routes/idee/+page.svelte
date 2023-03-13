@@ -30,6 +30,10 @@
     } 
 </style>
 
+<svelte:head>
+   <title>Appie Kookboek | Ideeën</title>
+</svelte:head>
+
 <main>
     <h2 class="subtitle">Nieuwe recept of idee?</h2>
     <br>

@@ -20,6 +20,10 @@
 
 </style>
 
+<svelte:head>
+   <title>Appie Kookboek | Recepten</title>
+</svelte:head>
+
 <main lang="ts">
     <h2>Recepten</h2>
     Toevoegingen? Meld bij de <a href="/idee">de beheerder</a>
