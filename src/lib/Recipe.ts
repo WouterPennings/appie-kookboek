@@ -73,7 +73,8 @@ export interface Ingredient {
     {
       name: "Kibbeling Tortilla",
       inventors: ["Wouter Pennings"],
-      img_path: ["food/wrapskibbeling.png"],
+      // img_path: ["food/wrapskibbeling.png"],
+      img_path: ["food/no_img.png"],
       main_ingredients: [{ name: "Zacht broodje" }, { name: "Kroket" }],
       topings: [],
       vegan: true,
@@ -86,7 +87,7 @@ export interface Ingredient {
     {
       name: "Vegan Hamburger",
       inventors: ["Job Sturm"],
-      img_path: ["food/vega_hamburger.png"],
+      img_path: ["food/hamburger.jpeg"],
       main_ingredients: [{ name: "Zacht broodje" }, { name: "Kroket" }],
       topings: [],
       vegan: true,
@@ -99,7 +100,8 @@ export interface Ingredient {
     {
       name: "Pita met Gehaktballen",
       inventors: ["Anouk Nobel", "Wouter Pennings"],
-      img_path: ["food/pita_meatballs.png"],
+      // img_path: ["food/pita_meatballs.png"],
+      img_path: ["food/no_img.png"],
       main_ingredients: [{ name: "Zacht broodje" }, { name: "Kroket" }],
       topings: [],
       vegan: true,
@@ -112,7 +114,7 @@ export interface Ingredient {
     {
       name: "Pita met Falafel",
       inventors: ["Wouter Pennings"],
-      img_path: ["food/falafel_pita.png"],
+      img_path: ["food/pita_falafel.jpg"],
       main_ingredients: [{ name: "Zacht broodje" }, { name: "Kroket" }],
       topings: [],
       vegan: true,

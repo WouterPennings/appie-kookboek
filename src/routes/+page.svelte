@@ -86,7 +86,9 @@
 <p>
     Het is best simpel. Wouter moest elke week avond eten bij de Appie, alleen vindt magnetron maaltijden niet lekker en wraps met kip 🐓 elke week gaat hij ook niet aan beginnen.
     <br> <br>
-    Hier vind jij dus een lijst aan recepten voor het avond eten bij de Albert Heijn die goedgekeurd zijn door Wouter. De recepten ze bedoelt voor (kleine) groepjes, maar in je eentje kan bij sommigen ook! Wouter heeft ze natuurlijk niet allemaal zelf bedacht, de creativiteit van ander word altijd gewaardeerdt.
+    Hier vind jij dus een lijst aan recepten voor het avond eten bij de Albert Heijn die goedgekeurd zijn door Wouter. 
+    De recepten ze bedoelt voor (kleine) groepjes, maar in je eentje kan bij sommigen ook! 
+    Wouter heeft ze natuurlijk niet allemaal zelf bedacht, de creativiteit van ander word altijd gewaardeerd.
 </p>
 
 <h2 class="subtitle">De 5 recept zekerheden</h2>
