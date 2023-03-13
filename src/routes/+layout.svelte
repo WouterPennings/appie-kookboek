@@ -6,50 +6,22 @@
     }
 
     main {
-        padding: 0 10px
+        margin-top: 30px;
+        padding: 0 15px
     } 
 
-    /* nav {
-        width: 100%;
-
-        display: flex; 
-        justify-content: space-around; 
-        align-items: center; 
-
-        background-color: lightblue;
-        padding: 0 10px;
+    footer {
+        display: flex;
+        justify-content: center;
+        margin: 50px 0 20px 0;
+        padding: 0 5px; 
     }
-
-    .logo {
-        width: 48px;
-    }
-
-    .nav-text {
-        font-size: 20px;
-        font-weight: 600;
-    }
-
-    a, a:visited, a:active {
-        color: inherit;
-        text-decoration: none;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    } */
 </style>
-
-<!-- This is the navbar, currently not in use, maybe later is needed
-<nav>
-    <a class="nav-text nav-btn" href="/recepten">Recepten</a>
-    <a href="/">
-        <img class="logo" alt="ah_logo" src="ah_logo.png">
-    </a>
-    <a class="nav-text nav-btn" href="/info">Info</a>
-</nav> -->
-
-<br>
 
 <main>
     <slot></slot>
+
+    <footer>
+        <h3>Made with ❤️ by <a href="https://wouterpennings.com">Wouter Pennings</a></h3>
+    </footer>
 </main>

@@ -1,3 +1,9 @@
+<script>
+    import Zekerheid from "$lib/Zekerheid.svelte";
+
+    
+</script>
+
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
@@ -13,18 +19,6 @@
         text-align: center;
     }
 
-    main {
-        margin-top: 30px;
-        padding: 0 5px;
-    }
-
-    footer {
-        display: flex;
-        justify-content: center;
-        margin: 50px 0 20px 0;
-        padding: 0 5px; 
-    }
-
     .title {
         display:flex; 
         align-items: center; 
@@ -36,19 +30,6 @@
         margin-top: 50px;
         text-align: center;
         font-weight: 800;
-    }
-
-    .subsubtitle {
-        display:flex; 
-        justify-content: center;
-        align-items: center; 
-        gap: 10px; 
-
-        margin-top: 15px;
-        margin-bottom: 5px;
-        text-align: center;
-        font-weight: 700;
-        color: #ff7900;
     }
 
     .btn-recipe {
@@ -91,61 +72,66 @@
     }
 
     .home_img {
-        width: 100%;
+        margin-left: 20px;
+        width: 85%;
         margin-top: 10px;
         border-radius: 16px;
     }
 </style>
 
-<main>
-    <div class="title">
-        <img src="ah_logo.png" alt="ah_logo" width="48px"> 
-        <h1>Appie kookboek</h1>
-    </div>
-    <h3>De lekkerste recepten voor tijdens de avond pauze!</h3>
-    
-    <a class="btn-recipe" href="/recepten">
-        <h2>Naar de recepten</h2>  
-        <img src="arrow.png" alt="arrow" width="36px" height="36px"> 
-    </a>
+<div class="title">
+    <img src="ah_logo.png" alt="ah_logo" width="48px"> 
+    <h1>Appie kookboek</h1>
+</div>
+<h3>De lekkerste recepten voor tijdens de avond pauze!</h3>
 
-    <div style="display: flex; justify-content: end;">
-        <a class="btn-idea" href="/idee"><h2>Nieuw idee?</h2></a>   
-    </div>
-    
-    <img src="home_img2.jpg" alt="home_img" class="home_img"> 
+<a class="btn-recipe" href="/recepten">
+    <h2>Naar de recepten</h2>  
+    <img src="arrow.png" alt="arrow" width="36px" height="36px"> 
+</a>
 
-    <h2 class="subtitle">Over het kookboek</h2>
-    <br>
-    <p>
-        Het is best simpel. Wouter moest elke week avond eten bij de Appie, alleen vindt magnetron maaltijden niet lekker en wraps met kip 🐓 elke week gaat hij ook niet aan beginnen.
-        <br> <br>
-        Hier vind jij dus een lijst aan recepten voor het avond eten bij de Albert Heijn die goedgekeurd zijn door Wouter. De recepten ze bedoelt voor (kleine) groepjes, maar in je eentje kan bij sommigen ook! Wouter heeft ze natuurlijk niet allemaal zelf bedacht, de creativiteit van ander word altijd gewaardeerdt.
-    </p>
+<div style="display: flex; justify-content: end;">
+    <a class="btn-idea" href="/idee"><h2>Nieuw idee?</h2></a>   
+</div>
 
-    <h2 class="subtitle">De recept garanties</h2>
-    <div class="subsubtitle">
-        <img src="carrot_icon.png" alt="carrot_icon">
-        <h3>Gezonder</h3>
-    </div>
-    <p>Door veel gebruik te maken van verse producten met minder zout en suiker dan de kant-en-klaar maaltijden.</p>
+<img src="home_img2.jpg" alt="home_img" class="home_img"> 
 
-    <div class="subsubtitle">
-        <img src="star_icon.png" alt="star_icon">
-        <h3>Variërend</h3>
-    </div>
-    <p>Veel verschillende soorten maaltijden, waarbij veel gebruik wordt gemaakt van verschillende groente, eiwitten en koolhydraten.</p>
+<h2 class="subtitle">Over het kookboek</h2>
+<br>
+<p>
+    Het is best simpel. Wouter moest elke week avond eten bij de Appie, alleen vindt magnetron maaltijden niet lekker en wraps met kip 🐓 elke week gaat hij ook niet aan beginnen.
+    <br> <br>
+    Hier vind jij dus een lijst aan recepten voor het avond eten bij de Albert Heijn die goedgekeurd zijn door Wouter. De recepten ze bedoelt voor (kleine) groepjes, maar in je eentje kan bij sommigen ook! Wouter heeft ze natuurlijk niet allemaal zelf bedacht, de creativiteit van ander word altijd gewaardeerdt.
+</p>
 
-
-    <div class="subsubtitle">
-        <img src="leaf_icon.png" alt="leaf_icon">
-        <h3>Frisser</h3>
-    </div>
-    <p>Door het gebruik van bijvoorbeeld verse groente zijn deze maaltijden een stuk verser dan de meeste dingen die je bij de Appie zou eten.</p>
+<h2 class="subtitle">De 5 recept zekerheden</h2>
  
-</main>
+<Zekerheid 
+    subtitle="Binnen budget" 
+    img_path="dollar_icon.png" 
+    text="Alle recepten vallen onder de prijs plafon van het inflatie-gekoppelde maaltijd budget.">
+</Zekerheid>
 
-<footer>
-    <h3>Made with ❤️ by <a href="https://wouterpennings.com">Wouter Pennings</a></h3>
-</footer>
+<Zekerheid 
+    subtitle="Gezonder" 
+    img_path="carrot_icon.png" 
+    text="Door veel gebruik te maken van verse producten met minder zout en suiker dan de kant-en-klaar maaltijden.">
+</Zekerheid>
 
+<Zekerheid 
+    subtitle="Variërend" 
+    img_path="star_icon.png" 
+    text="Veel verschillende soorten maaltijden, waarbij veel gebruik wordt gemaakt van verschillende groente, eiwitten en koolhydraten.">
+</Zekerheid>
+
+<Zekerheid 
+    subtitle="Lekker vers!" 
+    img_path="leaf_icon.png" 
+    text="Door het gebruik van bijvoorbeeld verse groente zijn deze maaltijden een stuk verser dan de meeste dingen die je bij de Appie zou eten.">
+</Zekerheid>
+
+<Zekerheid 
+    subtitle="Vlugge bereiding" 
+    img_path="clock_icon.png" 
+    text="De recepten hebben een snelle bereiding zeker voor grotere groepen. Hierdoor kan jij weer snel door met werken.">
+</Zekerheid>
