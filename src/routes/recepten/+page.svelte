@@ -13,7 +13,7 @@
         width: 100%;
     }
     
-    p, h1, h2, h3 {
+    h2 {
         margin: 0;
         padding: 0;
     }

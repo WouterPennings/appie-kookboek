@@ -7,7 +7,7 @@
         width: 100%;
     }
     
-    p, h1, h2, h3 {
+    p, h2 {
         margin: 0;
         padding: 0;
     }
@@ -31,7 +31,7 @@
 </style>
 
 <main>
-    <h2 class="subtitle">Nieuwe recept?</h2>
+    <h2 class="subtitle">Nieuwe recept of idee?</h2>
     <br>
     <p>
         Deze pagina is helaas nog in ontwikkeling. Als je al een idee hebt, klik dan op de link hieronder. In het mailtje staan het liefst deze dingen:
@@ -41,8 +41,17 @@
         <li>Topings voor eten</li>
         <li>Foto's van het eten</li>
         <li>Belangrijke opmerkingen</li>
-        <li>Tips; tops; opmerkingen; liefdesverklaringen - allemaal goed</li>
     </ol>
+
+    <p>
+        Maar deze dingen mogen er ook best in staan:
+    </p>
+    <ul>
+        <li>Vragen</li>
+        <li>Tips; tops; opmerkingen; liefdesverklaringen - allemaal goed!</li>
+        <li>Functionaliteit aanvragen</li>
+    </ul>
+
     <a href="mailto:wouter.pennings@outlook.com?subject=Appie kookboek recept idee">
         <h2>Stuur idee via Email</h2>
     </a>
