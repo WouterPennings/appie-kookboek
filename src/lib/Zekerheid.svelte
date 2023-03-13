@@ -6,13 +6,11 @@
 
 <style>
     h1, h2, h3, h4, p {
-        text-align: center;
         margin: 0;
     }
 
     .subsubtitle {
         display:flex; 
-        justify-content: center;
         align-items: center; 
         gap: 10px; 
 

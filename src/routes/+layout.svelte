@@ -24,11 +24,9 @@
 
 
     main {
-        margin-top: 30px;
+        margin-top: 35px;
         padding: 0 15px;
 
-        position: relative;
-        min-height: 100vh;
     } 
 
     footer {
@@ -41,7 +39,7 @@
         display:flex; 
         align-items: center; 
         gap: 10px; 
-        margin-top: 30px;
+        margin-top: 15px;
     }
 
 </style>
@@ -54,6 +52,7 @@
         <img src="ah_logo.png" alt="ah_logo" width="48px"> 
         <h1>Appie kookboek</h1>
     </a>
+    <br>
 
     <slot></slot>
 

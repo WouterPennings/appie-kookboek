@@ -9,7 +9,6 @@
 
     * {
         font-family: 'Raleway', sans-serif;
-        text-align: center;
     }
 
     h1, h2, h3, h4, p {

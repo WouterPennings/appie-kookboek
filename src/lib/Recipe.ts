@@ -83,7 +83,6 @@ export interface Ingredient {
     {
       name: "Kibbeling Tortilla",
       inventors: ["Wouter Pennings"],
-      // img_path: ["food/wrapskibbeling.png"],
       img_path: ["food/no_img.png"],
       main_ingredients: [{ name: "Zacht broodje" }, { name: "Kroket" }],
       topings: [],
@@ -114,7 +113,6 @@ export interface Ingredient {
     {
       name: "Pita met Gehaktballen",
       inventors: ["Anouk Nobel", "Wouter Pennings"],
-      // img_path: ["food/pita_meatballs.png"],
       img_path: ["food/no_img.png"],
       main_ingredients: [{ name: "Zacht broodje" }, { name: "Kroket" }],
       topings: [],

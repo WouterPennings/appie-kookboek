@@ -11,7 +11,6 @@
     
     main {
         width: 100%;
-        margin-top: 30px;
     }
     
     p, h1, h2, h3 {
@@ -22,12 +21,9 @@
 </style>
 
 <main lang="ts">
-    <h1>Recepten</h1>
-    <br>
-    Hieronder staan alle recepten weergeven van dit kookboek. 
-    Helaas heeft de website niet van elke recept een originele foto in bezit. 
-    Als je een van deze recepten maakt dan mag je de foto altijd sturen naar <a href="/idee">de beheerder</a>
-    <br><br><br>
+    <h2>Recepten</h2>
+    Toevoegingen? Meld bij de <a href="/idee">de beheerder</a>
+    <br><br>
     
     {#each recipes as recipe}
         <Recipecard recipe={recipe}></Recipecard>  
