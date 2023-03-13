@@ -9,26 +9,15 @@
 
     * {
         font-family: 'Raleway', sans-serif;
+        text-align: center;
     }
 
     h1, h2, h3, h4, p {
         margin: 0;
     }
 
-    p {
-        text-align: center;
-    }
-
-    .title {
-        display:flex; 
-        align-items: center; 
-        gap: 10px; 
-        margin: 5px 0;
-    }
-
     .subtitle {
         margin-top: 50px;
-        text-align: center;
         font-weight: 800;
     }
 
@@ -79,15 +68,11 @@
     }
 </style>
 
-<div class="title">
-    <img src="ah_logo.png" alt="ah_logo" width="48px"> 
-    <h1>Appie kookboek</h1>
-</div>
-<h3>De lekkerste recepten voor tijdens de avond pauze!</h3>
+<h3 style="text-align: start;">De lekkerste recepten voor tijdens de avond pauze!</h3>
 
 <a class="btn-recipe" href="/recepten">
     <h2>Naar de recepten</h2>  
-    <img src="arrow.png" alt="arrow" width="36px" height="36px"> 
+    <img src="icons/arrow_icon.png" alt="arrow" width="36px" height="36px"> 
 </a>
 
 <div style="display: flex; justify-content: end;">
@@ -108,30 +93,30 @@
  
 <Zekerheid 
     subtitle="Binnen budget" 
-    img_path="dollar_icon.png" 
+    img_path="icons/dollar_icon.png" 
     text="Alle recepten vallen onder de prijs plafon van het inflatie-gekoppelde maaltijd budget.">
 </Zekerheid>
 
 <Zekerheid 
     subtitle="Gezonder" 
-    img_path="carrot_icon.png" 
+    img_path="icons/carrot_icon.png" 
     text="Door veel gebruik te maken van verse producten met minder zout en suiker dan de kant-en-klaar maaltijden.">
 </Zekerheid>
 
 <Zekerheid 
     subtitle="Variërend" 
-    img_path="star_icon.png" 
+    img_path="icons/star_icon.png" 
     text="Veel verschillende soorten maaltijden, waarbij veel gebruik wordt gemaakt van verschillende groente, eiwitten en koolhydraten.">
 </Zekerheid>
 
 <Zekerheid 
     subtitle="Lekker vers!" 
-    img_path="leaf_icon.png" 
+    img_path="icons/leaf_icon.png" 
     text="Door het gebruik van bijvoorbeeld verse groente zijn deze maaltijden een stuk verser dan de meeste dingen die je bij de Appie zou eten.">
 </Zekerheid>
 
 <Zekerheid 
     subtitle="Vlugge bereiding" 
-    img_path="clock_icon.png" 
+    img_path="icons/clock_icon.png" 
     text="De recepten hebben een snelle bereiding zeker voor grotere groepen. Hierdoor kan jij weer snel door met werken.">
 </Zekerheid>

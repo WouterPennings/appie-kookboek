@@ -5,20 +5,56 @@
         font-family: 'Raleway', sans-serif;
     }
 
+    h1, h2, h3, h4, p {
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a:hover {
+        cursor: pointer;
+    }
+
+    a:visited {
+        color: black;
+    }
+
+
     main {
         margin-top: 30px;
-        padding: 0 15px
+        padding: 0 15px;
+
+        position: relative;
+        min-height: 100vh;
     } 
 
     footer {
-        display: flex;
-        justify-content: center;
-        margin: 50px 0 20px 0;
-        padding: 0 5px; 
+        color: black;
+        text-align: center;
+        margin: 30px 0;
     }
+
+    .title {
+        display:flex; 
+        align-items: center; 
+        gap: 10px; 
+        margin-top: 30px;
+    }
+
 </style>
 
+
+
+
 <main>
+    <a class="title" href="/">
+        <img src="ah_logo.png" alt="ah_logo" width="48px"> 
+        <h1>Appie kookboek</h1>
+    </a>
+
     <slot></slot>
 
     <footer>
