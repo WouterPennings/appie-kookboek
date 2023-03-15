@@ -1,4 +1,5 @@
 <script lang="ts">
+    import Backbtn from '$lib/Backbtn.svelte';
     import type { Recipe } from '$lib/Recipe';
     import Tag from '$lib/Tag.svelte';
     import { error } from '@sveltejs/kit';
@@ -15,7 +16,11 @@
 </script>
 
 <style>
-    h2, h3, h4 {
+    ol, ul {
+        margin-top: 0;
+    }
+
+    p, h2, h3, h4 {
         margin: 0;
         padding: 0;
     }
@@ -28,7 +33,7 @@
         width: 100%;
         border-radius: 16px;
     }
-
+    
     .inventors {
         color: gray;
         margin-bottom: 10px;
@@ -38,35 +43,12 @@
         display: flex;
         gap: 5px;
     }
-
-    .btn {
-        width: fit-content;
-        display: flex;
-        gap: 10px;
-        
-        padding: 5px 20px;
-        margin-bottom: 5px;
-
-        border-radius: 16px;
-        color: black;
-        background-color: #e2f1fb;
-        text-decoration: none;
-        font-weight: 900;
-    }
-
-    .arrow-back {
-        rotate: 180deg;
-        height: 20px;
-        width: auto;
-    }
 </style>
 
 
 <main>
-    <a class="btn" href="/recepten">
-        <img class="arrow-back" src="../icons/arrow_icon.png" alt="arrow"> 
-        <h4>Terug</h4>  
-    </a>
+    <Backbtn url="/recepten"></Backbtn>
+
     <!-- This path feels very sketchy, this prob can be done differently -->
     <img src={"../"+recipe.img_path[0]} alt="Hello">
     <h2>{recipe.name}</h2>
@@ -126,4 +108,16 @@
         {/if}
         {/each}
     </ul>
+
+    {#if recipe.description != undefined}
+        <h3>Uitleg</h3>
+        {#if Array.isArray(recipe.description)}
+            {#each recipe.description as paragraph}
+                <p>{paragraph}</p>
+                <br>
+            {/each}
+        {:else}
+            <p>{recipe.description}</p>
+        {/if}
+    {/if}
 </main>

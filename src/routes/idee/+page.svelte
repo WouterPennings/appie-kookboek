@@ -1,3 +1,7 @@
+<script>
+    import Backbtn from "$lib/Backbtn.svelte";
+</script>
+
 <style>
     * {
         font-family: 'Raleway', sans-serif;
@@ -5,7 +9,7 @@
     
     main {
         width: 100%;
-        padding: 0 15px;
+        padding: 0 10px;
     }
     
     p, h2 {
@@ -36,6 +40,8 @@
 </svelte:head>
 
 <main>
+    <Backbtn url="/"></Backbtn>
+
     <h2 class="subtitle">Nieuwe recept of idee?</h2>
     <br>
     <p>

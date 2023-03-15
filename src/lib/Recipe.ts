@@ -9,6 +9,7 @@ export interface Recipe {
   img_path: string[];
   main_ingredients: Ingredient[];
   topings: Ingredient[];
+  description?: string | string[];
   vegan: boolean;
   vega: boolean;
   fish: boolean;
@@ -109,6 +110,7 @@ export const recipes: Recipe[] = [
       { name: "Lente ui" },
       { name: "Zacht gekookt ei" },
     ],
+    description: "Dit werkt goed voor grotere groepen, zorg alleen wel dat je minder noodles maakt dan je verwacht. Ervaring leert dat je ongeveer 1/3 minder noodles gebruikt dan normaal.",
     vegan: false,
     vega: true,
     fish: false,
@@ -155,7 +157,8 @@ export const recipes: Recipe[] = [
     topings: [
       { name: "Ijsbergsla" }, 
       { name: "Gefrietuurde uitjes" }, 
-      { name: "Augurk" }
+      { name: "Augurk" },
+      { name: "Kaas" }
     ],
     vegan: true,
     vega: true,
