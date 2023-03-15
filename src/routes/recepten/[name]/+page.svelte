@@ -29,7 +29,7 @@
         border-radius: 16px;
     }
 
-    h4 {
+    .inventors {
         color: gray;
         margin-bottom: 10px;
     }
@@ -65,12 +65,12 @@
 <main>
     <a class="btn" href="/recepten">
         <img class="arrow-back" src="../icons/arrow_icon.png" alt="arrow"> 
-        <h5>Terug</h5>  
+        <h4>Terug</h4>  
     </a>
     <!-- This path feels very sketchy, this prob can be done differently -->
     <img src={"../"+recipe.img_path[0]} alt="Hello">
     <h2>{recipe.name}</h2>
-    <h4>{recipe.inventors.join(", ")}</h4>
+    <h4 class="inventors">{recipe.inventors.join(", ")}</h4>
 
     <div class="tags">
         {#if recipe.microwave}
