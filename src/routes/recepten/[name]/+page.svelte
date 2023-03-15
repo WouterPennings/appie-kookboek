@@ -69,7 +69,7 @@
         {#if recipe.vegan}
             <Tag class_name="veg_label" path="../icons/vegan_icon.png" label_name="Vegan"></Tag>
         {:else if recipe.vega}
-            <Tag class_name="veg_label" path="../icons/vegan_icon.png" label_name="Vegan"></Tag>
+            <Tag class_name="veg_label" path="../icons/vegatarian_icon.png" label_name="Vegatarisch"></Tag>
         {:else}
             {#if recipe.meat}
                 <Tag class_name="meat_label" path="../icons/meat_icon.png" label_name="Vlees"></Tag>
