@@ -56,7 +56,7 @@
 
     .arrow-back {
         rotate: 180deg;
-        height: 16px;
+        height: 20px;
         width: auto;
     }
 </style>
