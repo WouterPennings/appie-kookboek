@@ -1,7 +1,5 @@
 <script>
     import Zekerheid from "$lib/Zekerheid.svelte";
-
-    
 </script>
 
 <style>
@@ -16,7 +14,7 @@
     }
 
     main {
-        margin: 0 15px;
+        margin: 0 10px;
     }
 
     .subtitle {

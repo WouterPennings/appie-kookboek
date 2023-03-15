@@ -8,7 +8,6 @@
     }
     
     main {
-        width: 100%;
         padding: 0 10px;
     }
     
@@ -20,7 +19,6 @@
     a {
         display: flex;
         justify-content: center;
-        align-items: center;
 
         margin-top: 30px;
         margin-bottom: 10px;
