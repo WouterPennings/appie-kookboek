@@ -11,7 +11,7 @@
         font-family: 'Raleway', sans-serif;
     }
 
-    h1, h2, h3, h4, p {
+    h2, h3, p {
         margin: 0;
     }
 
