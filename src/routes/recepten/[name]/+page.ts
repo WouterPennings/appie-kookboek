@@ -1,15 +1,11 @@
-import { error } from '@sveltejs/kit';
-import { recipes } from '$lib/Recipe'; 
+import { recipeNames, recipes } from "$lib/Recipe";
 
-export function load({ params }: any) {
-    let x = recipes.map(recipe => recipe.name);
-    console.log(x.includes(params.name))
-    if (params.name === 'hello-world') {
+export const load = ({ params }: any) => {
+    if(recipeNames.includes(params.name)) {
         return {
-            title: 'Hello world!',
-            content: 'Welcome to our blog. Lorem ipsum dolor sit amet...'
-        };
+            data: recipes.find(r => r.name == params.name)
+        }
     }
 
-    throw error(404, 'Not found');
+    return;
 }

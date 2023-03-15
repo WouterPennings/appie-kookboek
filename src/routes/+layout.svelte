@@ -25,7 +25,7 @@
 
     main {
         margin-top: 35px;
-        padding: 0 15px;
+        padding: 0 0;
 
     } 
 
@@ -40,16 +40,18 @@
         align-items: center; 
         gap: 10px; 
         margin-top: 15px;
+        margin-left: 15px;
     }
 
 </style>
 
-
-
+<!-- <svelte:head>
+  <link rel="icon" type="image/svg" href="favicon.png" />
+</svelte:head> -->
 
 <main>
     <a class="title" href="/">
-        <img src="ah_logo.png" alt="ah_logo" width="48px"> 
+        <img src="../ah_logo.png" alt="ah_logo" width="48px"> 
         <h1>Appie kookboek</h1>
     </a>
     <br>

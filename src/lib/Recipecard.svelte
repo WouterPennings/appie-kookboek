@@ -1,5 +1,6 @@
 <script lang="ts">
     import type { Recipe } from "./Recipe";
+    import Tag from "$lib/Tag.svelte";
 
 	export let recipe: Recipe;
 </script>
@@ -24,7 +25,16 @@
     img {
         width: 15px;
     }
-
+    
+    .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap: 5px;
+        margin-left: 15px;
+        text-align: start;
+    }
+    
     label {
         display: flex;
         align-items: center;
@@ -35,16 +45,7 @@
         font-weight: 700;
         font-size: 0.9em;
     }
-
-    .info {
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        gap: 5px;
-        margin-left: 15px;
-        text-align: start;
-    }
-
+    
     .veg_label {
         border: 2px #40c057 solid;
         color: #236b30;
@@ -69,7 +70,7 @@
         width: 130px;
         height: auto;
         border-radius: 16px;
-        box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.185);
+        box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.164);
     }
 
     .labels {
@@ -90,14 +91,17 @@
 
         <div class="labels">
             {#if recipe.microwave}
+                <Tag class_name="utility_label" path="icons/microwave_icon.png" label_name="Magnetron"></Tag>
                 <label class="utility_label" for=""><img src="icons/microwave_icon.png" alt="fish_icon.png"> Magnetron</label>
             {/if}
 
             {#if recipe.airfryer}
+                <Tag class_name="utility_label" path="icons/airfryer_icon.png" label_name="Magnetron"></Tag>
                 <label class="utility_label" for=""><img src="icons/airfryer_icon.png" alt="fish_icon.png"> Airfryer</label>
             {/if}
 
             {#if recipe.pan}
+                <Tag class_name="utility_label" path="icons/pan_icon.png" label_name="Magnetron"></Tag>
                 <label class="utility_label" for=""><img src="icons/pan_icon.png" alt="fish_icon.png"> Pan</label>
             {/if}
         </div>
@@ -109,7 +113,7 @@
                 <label class="veg_label" for=""><img src="icons/vegatarian_icon.png" alt="vegatarian_icon.png"> Vegatarisch</label>
             {:else}
                 {#if recipe.meat}
-                    <label class="meat_label" for=""><img src="icons/meat_icon.png" alt="meat_icon.png"> Vless</label>
+                    <label class="meat_label" for=""><img src="icons/meat_icon.png" alt="meat_icon.png"> Vlees</label>
                 {/if}
 
                 {#if recipe.fish}
