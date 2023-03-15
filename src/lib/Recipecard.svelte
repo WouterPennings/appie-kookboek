@@ -92,17 +92,14 @@
         <div class="labels">
             {#if recipe.microwave}
                 <Tag class_name="utility_label" path="icons/microwave_icon.png" label_name="Magnetron"></Tag>
-                <label class="utility_label" for=""><img src="icons/microwave_icon.png" alt="fish_icon.png"> Magnetron</label>
             {/if}
 
             {#if recipe.airfryer}
-                <Tag class_name="utility_label" path="icons/airfryer_icon.png" label_name="Magnetron"></Tag>
-                <label class="utility_label" for=""><img src="icons/airfryer_icon.png" alt="fish_icon.png"> Airfryer</label>
+                <Tag class_name="utility_label" path="icons/airfryer_icon.png" label_name="Airfryer"></Tag>
             {/if}
 
             {#if recipe.pan}
-                <Tag class_name="utility_label" path="icons/pan_icon.png" label_name="Magnetron"></Tag>
-                <label class="utility_label" for=""><img src="icons/pan_icon.png" alt="fish_icon.png"> Pan</label>
+                <Tag class_name="utility_label" path="icons/pan_icon.png" label_name="Pan"></Tag>            
             {/if}
         </div>
 
