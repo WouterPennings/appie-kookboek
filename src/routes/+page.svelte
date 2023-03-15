@@ -18,7 +18,7 @@
     }
 
     .subtitle {
-        margin-top: 50px;
+        margin-top: 30px;
         font-weight: 800;
     }
 
@@ -62,10 +62,9 @@
     }
 
     .home_img {
-        margin-left: 20px;
-        width: 85%;
-        margin-top: 10px;
+        width: 100%;
         border-radius: 16px;
+        margin-top: 10px;
     }
 </style>
 
