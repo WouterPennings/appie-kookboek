@@ -6,7 +6,7 @@
 </script>
 
 <style>
-    p, h1, h2, h3, h4 {
+    h3, h4 {
         margin: 0;
         padding: 0;
     }
@@ -16,10 +16,12 @@
         font-size: small;
     }
 
-    main {
+    a {
+        text-decoration: none;
         display: flex;
         justify-content: start;
         margin-bottom: 20px;
+        color: black
     }
 
     img {
@@ -34,37 +36,6 @@
         margin-left: 15px;
         text-align: start;
     }
-    
-    label {
-        display: flex;
-        align-items: center;
-
-        width: min-content;
-        padding: 1px 6px;
-        border-radius: 16px;
-        font-weight: 700;
-        font-size: 0.9em;
-    }
-    
-    .veg_label {
-        border: 2px #40c057 solid;
-        color: #236b30;
-    }
-
-    .meat_label {
-        border: 2px #fa5252 solid;
-        color: #b33b3b;
-    }
-
-    .fish_label {
-        border: 2px #22c3e6 solid;
-        color: #167a91;
-    }
-
-    .utility_label {
-        border: 2px #4d4d4d solid;
-        color: #252525;
-    }
 
     .card_img {
         width: 130px;
@@ -73,14 +44,14 @@
         box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.164);
     }
 
-    .labels {
+    .tags {
         display: flex;
         justify-content: start;
         gap: 5px;
     }
 </style>
 
-<main lang="ts">
+<a href={"/recepten/"+recipe.name} lang="ts">
     <!-- FIXME: Recipes could have multiple figures -->
     <img class="card_img" src={recipe.img_path[0]} alt={recipe.img_path[0]}>
     <div class="info">
@@ -89,7 +60,7 @@
             <h4>{recipe.inventors.join(", ")}</h4>
         </div>
 
-        <div class="labels">
+        <div class="tags">
             {#if recipe.microwave}
                 <Tag class_name="utility_label" path="icons/microwave_icon.png" label_name="Magnetron"></Tag>
             {/if}
@@ -103,20 +74,20 @@
             {/if}
         </div>
 
-        <div class="labels">
+        <div class="tags">
             {#if recipe.vegan}
-                <label class="veg_label" for=""><img src="icons/vegan_icon.png" alt="vegan_icon.png"> Vegan</label>
+                <Tag class_name="veg_label" path="../icons/vegan_icon.png" label_name="Vegan"></Tag>
             {:else if recipe.vega}
-                <label class="veg_label" for=""><img src="icons/vegatarian_icon.png" alt="vegatarian_icon.png"> Vegatarisch</label>
+                <Tag class_name="veg_label" path="../icons/vegatarian_icon.png" label_name="Vegatarisch"></Tag>
             {:else}
                 {#if recipe.meat}
-                    <label class="meat_label" for=""><img src="icons/meat_icon.png" alt="meat_icon.png"> Vlees</label>
+                    <Tag class_name="meat_label" path="../icons/meat_icon.png" label_name="Vlees"></Tag>
                 {/if}
-
+            
                 {#if recipe.fish}
-                    <label class="fish_label" for=""><img src="icons/fish_icon.png" alt="fish_icon.png"> Vis</label>
+                    <Tag class_name="fish_label" path="../icons/fish_icon.png" label_name="Vis"></Tag>
                 {/if}
             {/if}
         </div>
     </div>
-</main>
+</a>
