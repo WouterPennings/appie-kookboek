@@ -53,7 +53,7 @@
 
 <a href={"/recepten/"+recipe.name} lang="ts">
     <!-- FIXME: Recipes could have multiple figures -->
-    <img class="card_img" src={recipe.img_path[0]} alt={recipe.img_path[0]}>
+    <img class="card_img" src={recipe.img_path[0]} alt={recipe.img_path[0]} loading="lazy">
     <div class="info">
         <div>
             <h3>{recipe.name}</h3>

@@ -101,7 +101,7 @@
     <Zekerheid 
         subtitle="Binnen budget" 
         img_path="icons/dollar_icon.png" 
-        text="Alle recepten vallen onder de prijs plafon van het inflatie-gekoppelde maaltijd budget.">
+        text="Alle recepten vallen onder de prijs plafon van het maaltijd budget van 8 Euro.">
     </Zekerheid>
 
     <Zekerheid 

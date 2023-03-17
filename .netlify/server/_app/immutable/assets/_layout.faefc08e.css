@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+.svelte-60f8f8{font-family:'Raleway', sans-serif}
+h1.svelte-60f8f8,h3.svelte-60f8f8{margin:0;padding:0}
+a.svelte-60f8f8{text-decoration:none}
+a.svelte-60f8f8:hover{cursor:pointer}
+a.svelte-60f8f8:visited{color:black}
+main.svelte-60f8f8{margin-top:35px;padding:0 0}
+footer.svelte-60f8f8{color:black;text-align:center;margin:30px 0}
+.title.svelte-60f8f8{display:flex;align-items:center;gap:10px;margin-top:15px;margin-left:15px}

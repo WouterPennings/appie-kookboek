@@ -1,10 +1,8 @@
-import * as universal from '../entries/pages/about/_page.ts.js';
+
 
 export const index = 3;
-export const component = async () => (await import('../entries/pages/about/_page.svelte.js')).default;
-export const file = '_app/immutable/entry/about-page.svelte.bb2e7b3f.js';
-export { universal };
-export const universal_id = "src/routes/about/+page.ts";
-export const imports = ["_app/immutable/entry/about-page.svelte.bb2e7b3f.js","_app/immutable/chunks/index.fd460da0.js","_app/immutable/entry/about-page.ts.13bb5e39.js","_app/immutable/chunks/environment.9aa685ef.js","_app/immutable/chunks/_page.1806d283.js"];
-export const stylesheets = [];
+export const component = async () => (await import('../entries/pages/idee/_page.svelte.js')).default;
+export const file = '_app/immutable/entry/idee-page.svelte.a2e3be31.js';
+export const imports = ["_app/immutable/entry/idee-page.svelte.a2e3be31.js","_app/immutable/chunks/index.86f7df87.js","_app/immutable/chunks/Backbtn.2d45049c.js"];
+export const stylesheets = ["_app/immutable/assets/_page.3fcc8371.css","_app/immutable/assets/Backbtn.f27076b5.css"];
 export const fonts = [];

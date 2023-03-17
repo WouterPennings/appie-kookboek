@@ -1,151 +1,107 @@
-import { n as now, l as loop, c as create_ssr_component, a as subscribe, e as escape, b as add_attribute, v as validate_component } from "../../chunks/index3.js";
-import { w as writable } from "../../chunks/index2.js";
-function is_date(obj) {
-  return Object.prototype.toString.call(obj) === "[object Date]";
-}
-function tick_spring(ctx, last_value, current_value, target_value) {
-  if (typeof current_value === "number" || is_date(current_value)) {
-    const delta = target_value - current_value;
-    const velocity = (current_value - last_value) / (ctx.dt || 1 / 60);
-    const spring2 = ctx.opts.stiffness * delta;
-    const damper = ctx.opts.damping * velocity;
-    const acceleration = (spring2 - damper) * ctx.inv_mass;
-    const d = (velocity + acceleration) * ctx.dt;
-    if (Math.abs(d) < ctx.opts.precision && Math.abs(delta) < ctx.opts.precision) {
-      return target_value;
-    } else {
-      ctx.settled = false;
-      return is_date(current_value) ? new Date(current_value.getTime() + d) : current_value + d;
-    }
-  } else if (Array.isArray(current_value)) {
-    return current_value.map((_, i) => tick_spring(ctx, last_value[i], current_value[i], target_value[i]));
-  } else if (typeof current_value === "object") {
-    const next_value = {};
-    for (const k in current_value) {
-      next_value[k] = tick_spring(ctx, last_value[k], current_value[k], target_value[k]);
-    }
-    return next_value;
-  } else {
-    throw new Error(`Cannot spring ${typeof current_value} values`);
-  }
-}
-function spring(value, opts = {}) {
-  const store = writable(value);
-  const { stiffness = 0.15, damping = 0.8, precision = 0.01 } = opts;
-  let last_time;
-  let task;
-  let current_token;
-  let last_value = value;
-  let target_value = value;
-  let inv_mass = 1;
-  let inv_mass_recovery_rate = 0;
-  let cancel_task = false;
-  function set(new_value, opts2 = {}) {
-    target_value = new_value;
-    const token = current_token = {};
-    if (value == null || opts2.hard || spring2.stiffness >= 1 && spring2.damping >= 1) {
-      cancel_task = true;
-      last_time = now();
-      last_value = new_value;
-      store.set(value = target_value);
-      return Promise.resolve();
-    } else if (opts2.soft) {
-      const rate = opts2.soft === true ? 0.5 : +opts2.soft;
-      inv_mass_recovery_rate = 1 / (rate * 60);
-      inv_mass = 0;
-    }
-    if (!task) {
-      last_time = now();
-      cancel_task = false;
-      task = loop((now2) => {
-        if (cancel_task) {
-          cancel_task = false;
-          task = null;
-          return false;
-        }
-        inv_mass = Math.min(inv_mass + inv_mass_recovery_rate, 1);
-        const ctx = {
-          inv_mass,
-          opts: spring2,
-          settled: true,
-          dt: (now2 - last_time) * 60 / 1e3
-        };
-        const next_value = tick_spring(ctx, last_value, value, target_value);
-        last_time = now2;
-        last_value = value;
-        store.set(value = next_value);
-        if (ctx.settled) {
-          task = null;
-        }
-        return !ctx.settled;
-      });
-    }
-    return new Promise((fulfil) => {
-      task.promise.then(() => {
-        if (token === current_token)
-          fulfil();
-      });
-    });
-  }
-  const spring2 = {
-    set,
-    update: (fn, opts2) => set(fn(target_value, value), opts2),
-    subscribe: store.subscribe,
-    stiffness,
-    damping,
-    precision
-  };
-  return spring2;
-}
-const Counter_svelte_svelte_type_style_lang = "";
+import { c as create_ssr_component, d as add_attribute, e as escape, v as validate_component } from "../../chunks/index2.js";
+const Zekerheid_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: ".counter.svelte-y96mxt.svelte-y96mxt{display:flex;border-top:1px solid rgba(0, 0, 0, 0.1);border-bottom:1px solid rgba(0, 0, 0, 0.1);margin:1rem 0}.counter.svelte-y96mxt button.svelte-y96mxt{width:2em;padding:0;display:flex;align-items:center;justify-content:center;border:0;background-color:transparent;touch-action:manipulation;font-size:2rem}.counter.svelte-y96mxt button.svelte-y96mxt:hover{background-color:var(--color-bg-1)}svg.svelte-y96mxt.svelte-y96mxt{width:25%;height:25%}path.svelte-y96mxt.svelte-y96mxt{vector-effect:non-scaling-stroke;stroke-width:2px;stroke:#444}.counter-viewport.svelte-y96mxt.svelte-y96mxt{width:8em;height:4em;overflow:hidden;text-align:center;position:relative}.counter-viewport.svelte-y96mxt strong.svelte-y96mxt{position:absolute;display:flex;width:100%;height:100%;font-weight:400;color:var(--color-theme-1);font-size:4rem;align-items:center;justify-content:center}.counter-digits.svelte-y96mxt.svelte-y96mxt{position:absolute;width:100%;height:100%}.hidden.svelte-y96mxt.svelte-y96mxt{top:-100%;user-select:none}",
+  code: "h3.svelte-ap0znu,p.svelte-ap0znu{margin:0}.subsubtitle.svelte-ap0znu{display:flex;align-items:center;gap:10px;margin-top:15px;margin-bottom:5px;text-align:center;font-weight:700;color:#ff7900}",
   map: null
 };
-function modulo(n, m) {
-  return (n % m + m) % m;
-}
-const Counter = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let offset;
-  let $displayed_count, $$unsubscribe_displayed_count;
-  let count = 0;
-  const displayed_count = spring();
-  $$unsubscribe_displayed_count = subscribe(displayed_count, (value) => $displayed_count = value);
+const Zekerheid = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let { subtitle } = $$props;
+  let { text } = $$props;
+  let { img_path } = $$props;
+  if ($$props.subtitle === void 0 && $$bindings.subtitle && subtitle !== void 0)
+    $$bindings.subtitle(subtitle);
+  if ($$props.text === void 0 && $$bindings.text && text !== void 0)
+    $$bindings.text(text);
+  if ($$props.img_path === void 0 && $$bindings.img_path && img_path !== void 0)
+    $$bindings.img_path(img_path);
   $$result.css.add(css$1);
-  {
-    displayed_count.set(count);
-  }
-  offset = modulo($displayed_count, 1);
-  $$unsubscribe_displayed_count();
-  return `<div class="${"counter svelte-y96mxt"}"><button aria-label="${"Decrease the counter by one"}" class="${"svelte-y96mxt"}"><svg aria-hidden="${"true"}" viewBox="${"0 0 1 1"}" class="${"svelte-y96mxt"}"><path d="${"M0,0.5 L1,0.5"}" class="${"svelte-y96mxt"}"></path></svg></button>
-
-	<div class="${"counter-viewport svelte-y96mxt"}"><div class="${"counter-digits svelte-y96mxt"}" style="${"transform: translate(0, " + escape(100 * offset, true) + "%)"}"><strong class="${"hidden svelte-y96mxt"}" aria-hidden="${"true"}">${escape(Math.floor($displayed_count + 1))}</strong>
-			<strong class="${"svelte-y96mxt"}">${escape(Math.floor($displayed_count))}</strong></div></div>
-
-	<button aria-label="${"Increase the counter by one"}" class="${"svelte-y96mxt"}"><svg aria-hidden="${"true"}" viewBox="${"0 0 1 1"}" class="${"svelte-y96mxt"}"><path d="${"M0,0.5 L1,0.5 M0.5,0 L0.5,1"}" class="${"svelte-y96mxt"}"></path></svg></button>
-</div>`;
+  return `<div class="${"subsubtitle svelte-ap0znu"}"><img${add_attribute("src", img_path, 0)} alt="${"carrot_icon"}" width="${"24px"}">
+    <h3 class="${"svelte-ap0znu"}">${escape(subtitle)}</h3></div>
+<p class="${"svelte-ap0znu"}">${escape(text)}</p>`;
 });
-const welcome = "/_app/immutable/assets/svelte-welcome.c18bcf5a.webp";
-const welcome_fallback = "/_app/immutable/assets/svelte-welcome.6c300099.png";
 const _page_svelte_svelte_type_style_lang = "";
 const css = {
-  code: "section.svelte-19xx0bt.svelte-19xx0bt{display:flex;flex-direction:column;justify-content:center;align-items:center;flex:0.6}h1.svelte-19xx0bt.svelte-19xx0bt{width:100%}.welcome.svelte-19xx0bt.svelte-19xx0bt{display:block;position:relative;width:100%;height:0;padding:0 0 calc(100% * 495 / 2048) 0}.welcome.svelte-19xx0bt img.svelte-19xx0bt{position:absolute;width:100%;height:100%;top:0;display:block}",
+  code: "@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');.svelte-19zs8w8{font-family:'Raleway', sans-serif}h2.svelte-19zs8w8,h3.svelte-19zs8w8,p.svelte-19zs8w8{margin:0}main.svelte-19zs8w8{margin:0 10px}.subtitle.svelte-19zs8w8{margin-top:30px;font-weight:800}.btn-recipe.svelte-19zs8w8{margin-top:30px;margin-bottom:10px;padding:5px 20px;display:flex;justify-content:space-between;align-items:center;text-decoration:none;font-weight:800;color:black;border-radius:16px;width:260px;background-color:#e2f1fb}.btn-recipe.svelte-19zs8w8:hover{transition-duration:250ms;background-color:#00ade6;width:89%}.btn-idea.svelte-19zs8w8{padding:5px 20px;display:flex;justify-content:space-between;align-items:center;width:max-content;border-radius:16px;color:white;background-color:#ff7900;text-decoration:none;font-weight:900}.home_img.svelte-19zs8w8{width:100%;border-radius:16px;margin-top:10px}",
   map: null
 };
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
-  return `${$$result.head += `<!-- HEAD_svelte-t32ptj_START -->${$$result.title = `<title>Home</title>`, ""}<meta name="${"description"}" content="${"Svelte demo app"}"><!-- HEAD_svelte-t32ptj_END -->`, ""}
+  return `${$$result.head += `<!-- HEAD_svelte-gjv7gd_START -->${$$result.title = `<title>Appie Kookboek</title>`, ""}<!-- HEAD_svelte-gjv7gd_END -->`, ""}
 
-<section class="${"svelte-19xx0bt"}"><h1 class="${"svelte-19xx0bt"}"><span class="${"welcome svelte-19xx0bt"}"><picture><source${add_attribute("srcset", welcome, 0)} type="${"image/webp"}">
-				<img${add_attribute("src", welcome_fallback, 0)} alt="${"Welcome"}" class="${"svelte-19xx0bt"}"></picture></span>
+<main class="${"svelte-19zs8w8"}"><h3 style="${"text-align: start;"}" class="${"svelte-19zs8w8"}">De lekkerste recepten voor tijdens de avond pauze!</h3>
 
-		to your new<br>SvelteKit app
-	</h1>
+    <a class="${"btn-recipe svelte-19zs8w8"}" href="${"/recepten"}"><h2 class="${"svelte-19zs8w8"}">Naar de recepten</h2>  
+        <img src="${"icons/arrow_icon.png"}" alt="${"arrow"}" width="${"36px"}" height="${"36px"}" class="${"svelte-19zs8w8"}"></a>
 
-	<h2>try editing <strong>src/routes/+page.svelte</strong></h2>
+    <div style="${"display: flex; justify-content: end;"}" class="${"svelte-19zs8w8"}"><a class="${"btn-idea svelte-19zs8w8"}" href="${"/idee"}"><h2 class="${"svelte-19zs8w8"}">Nieuw idee?</h2></a></div>
 
-	${validate_component(Counter, "Counter").$$render($$result, {}, {}, {})}
-</section>`;
+    <img src="${"home_img2.jpg"}" alt="${"home_img"}" class="${"home_img svelte-19zs8w8"}"> 
+
+    <h2 class="${"subtitle svelte-19zs8w8"}">Over het kookboek</h2>
+    <br class="${"svelte-19zs8w8"}">
+    <p class="${"svelte-19zs8w8"}">Het is best simpel. Wouter moest elke week avond eten bij de Appie, alleen vindt magnetron maaltijden niet lekker en wraps met kip 🐓 elke week gaat hij ook niet aan beginnen.
+        <br class="${"svelte-19zs8w8"}"> <br class="${"svelte-19zs8w8"}">
+        Hier vind jij dus een lijst aan recepten voor het avond eten bij de Albert Heijn die goedgekeurd zijn door Wouter. 
+        De recepten ze bedoelt voor (kleine) groepjes, maar in je eentje kan bij sommigen ook! 
+        Wouter heeft ze natuurlijk niet allemaal zelf bedacht, de creativiteit van ander word altijd gewaardeerd.
+    </p>
+
+    <h2 class="${"subtitle svelte-19zs8w8"}">De 5 recept zekerheden</h2>
+    
+    ${validate_component(Zekerheid, "Zekerheid").$$render(
+    $$result,
+    {
+      subtitle: "Binnen budget",
+      img_path: "icons/dollar_icon.png",
+      text: "Alle recepten vallen onder de prijs plafon van het inflatie-gekoppelde maaltijd budget."
+    },
+    {},
+    {}
+  )}
+
+    ${validate_component(Zekerheid, "Zekerheid").$$render(
+    $$result,
+    {
+      subtitle: "Gezonder",
+      img_path: "icons/carrot_icon.png",
+      text: "Door veel gebruik te maken van verse producten met minder zout en suiker dan de kant-en-klaar maaltijden."
+    },
+    {},
+    {}
+  )}
+
+    ${validate_component(Zekerheid, "Zekerheid").$$render(
+    $$result,
+    {
+      subtitle: "Variërend",
+      img_path: "icons/star_icon.png",
+      text: "Veel verschillende soorten maaltijden, waarbij veel gebruik wordt gemaakt van verschillende groente, eiwitten en koolhydraten."
+    },
+    {},
+    {}
+  )}
+
+    ${validate_component(Zekerheid, "Zekerheid").$$render(
+    $$result,
+    {
+      subtitle: "Lekker vers!",
+      img_path: "icons/leaf_icon.png",
+      text: "Door het gebruik van bijvoorbeeld verse groente zijn deze maaltijden een stuk verser dan de meeste dingen die je bij de Appie zou eten."
+    },
+    {},
+    {}
+  )}
+
+    ${validate_component(Zekerheid, "Zekerheid").$$render(
+    $$result,
+    {
+      subtitle: "Vlugge bereiding",
+      img_path: "icons/clock_icon.png",
+      text: "De recepten hebben een snelle bereiding zeker voor grotere groepen. Hierdoor kan jij weer snel door met werken."
+    },
+    {},
+    {}
+  )}</main>`;
 });
 export {
   Page as default
