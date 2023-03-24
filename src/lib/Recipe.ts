@@ -47,6 +47,31 @@ export const recipes: Recipe[] = [
     pan: false,
   },
   {
+    name: "Libanese Wraps",
+    inventors: ["Wouter Pennings", "Vincent Jansen"],
+    img_path: ["food/libanese_wraps.png"],
+    main_ingredients: [
+      { name: "Libanese wraps" }, 
+      { name: "Falafel" }, 
+      { name: "Hummus" }
+    ],
+    topings: [
+      { name: "komkommer" }, 
+      { name: "Tomaatjes" }, 
+      { name: "Rode/witte ui" },
+      { name: "Sriracha" }, 
+      { name: "Witte kaas / Feta" }
+    ],
+    vegan: true,
+    vega: true,
+    fish: false,
+    meat: false,
+    veganable: true,
+    microwave: true,
+    airfryer: false,
+    pan: false,
+  },
+  {
     name: "Poke Bowl",
     inventors: ["Wouter Pennings", "Job Sturm"],
     img_path: ["food/poke_bowl.jpg"],
