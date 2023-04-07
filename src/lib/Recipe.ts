@@ -51,15 +51,15 @@ export const recipes: Recipe[] = [
     inventors: ["Wouter Pennings", "Vincent Jansen"],
     img_path: ["food/libanese_wraps.png"],
     main_ingredients: [
-      { name: "Libanese wraps" }, 
-      { name: "Falafel" }, 
+      { name: "Libanese wraps" },
+      { name: "Falafel" },
       { name: "Hummus" }
     ],
     topings: [
-      { name: "komkommer" }, 
-      { name: "Tomaatjes" }, 
+      { name: "komkommer" },
+      { name: "Tomaatjes" },
       { name: "Rode/witte ui" },
-      { name: "Sriracha" }, 
+      { name: "Sriracha" },
       { name: "Witte kaas / Feta" }
     ],
     vegan: true,
@@ -103,11 +103,11 @@ export const recipes: Recipe[] = [
     inventors: ["Wouter Pennings"],
     img_path: ["food/broodje_kroket.jpeg"],
     main_ingredients: [
-      { name: "Zacht broodje" }, 
-      { name: "Kroket of bitterballen" }, 
+      { name: "Zacht broodje" },
+      { name: "Kroket of bitterballen" },
     ],
     topings: [
-      { name: "Ijsbergsla" }, 
+      { name: "Ijsbergsla" },
       { name: "Mosterd" }
     ],
     vegan: false,
@@ -124,7 +124,7 @@ export const recipes: Recipe[] = [
     inventors: ["Job Sturm", "Wouter Pennings"],
     img_path: ["food/ramen.png"],
     main_ingredients: [
-      { name: "Ramen noodles" }, 
+      { name: "Ramen noodles" },
       { name: "Bouilion blokjes", options: ["Rund", "Planten", "Kip", "etc."] },
     ],
     topings: [
@@ -150,8 +150,8 @@ export const recipes: Recipe[] = [
     inventors: ["Wouter Pennings"],
     img_path: ["food/no_img.png"],
     main_ingredients: [
-      { name: "Tortilla" }, 
-      { name: "Kibbeling (Kan ook lekkerbekje)" }, 
+      { name: "Tortilla" },
+      { name: "Kibbeling (Kan ook lekkerbekje of vissticks)" },
       { name: "Ravigotte saus" }
     ],
     topings: [
@@ -171,17 +171,79 @@ export const recipes: Recipe[] = [
     pan: false,
   },
   {
+    name: "Hardshell Taco's",
+    inventors: ["Jan Rosmalen", "Wouter Pennings"],
+    img_path: ["food/taco.png"],
+    main_ingredients: [
+      { name: "Taco shells" },
+      { name: "Gehaktballen" },
+      { name: "Taco kruiden" }
+    ],
+    topings: [
+      { name: "Rode of witte ui" },
+      { name: "Ijsbergsla" },
+      { name: "Salsa" },
+      { name: "Creme fraiche" },
+      { name: "Gekruimde tortilla chips" },
+      { name: "Geraspte kaas" },
+      { name: "Cherry tomaatjes" },
+    ],
+    description: "Doe de gehaktballen in de magnetron gedurende de tijd die op de verpakking staat. Als de ballen uit de magnetron komen strooi dan de kruiden over de ballen heen, en doe ze nog voor 30 á 60 seconden terug als dat nodig is. Tijdens het even, kan je de \"kapot\" maken met een vork en mes om ze in de taco te doen.",
+    vegan: false,
+    vega: false,
+    fish: false,
+    meat: true,
+    veganable: true,
+    microwave: true,
+    airfryer: false,
+    pan: false,
+  },
+  {
+    name: "Vis Coleslaw Burger",
+    inventors: ["Job Sturm, Wouter Pennings"],
+    img_path: ["food/vis_burger.jpg"],
+    main_ingredients: [
+      { name: "Broodje (Hard of zacht)" },
+      { name: "Burger", options: ["Zalm, witvis"] },
+      { 
+        name: "Coleslaw", 
+        options: [
+          "Kant-en-klaar, of:", 
+          "Spitskool", 
+          "Wortel Julienne", 
+          "Ui",
+          "Mayonaise",
+          "Azijn",
+          "Zout, Peper, Suiker"
+        ] 
+      }
+    ],
+    topings: [
+      { name: "Sla" },
+      { name: "Augurk" },
+    ],
+    description: "Als je zelf coleslaw gaat maken: Doe de kool, wortel en ui in een grote kom. Schep daar 2 á 3 lepels mayonaise bij en een scheut azijn. Mix alles goed, doe er zout, peper en suiker naar smaak bij. Onthoud dat de coleslaw altijd zuurder, zouter en zoeter moet zijn dan je denkt, hoe moet namelijk ook nog te proeven zijn door andere componenten heen.",
+    vegan: true,
+    vega: true,
+    fish: true,
+    meat: false,
+    veganable: true,
+    microwave: false,
+    airfryer: true,
+    pan: false,
+  },
+  {
     name: "Vegan Hamburger",
     inventors: ["Job Sturm"],
     img_path: ["food/hamburger.jpeg"],
     main_ingredients: [
-      { name: "Broodje (Hard of zacht)" }, 
-      { name: "Burger", options: ["Vega", "Rund", "Kip"] }, 
+      { name: "Broodje (Hard of zacht)" },
+      { name: "Burger", options: ["Vega", "Rund", "Kip"] },
       { name: "Saus", options: ["Mayonaise", "Burgersaus", "Ketchup", "etc."] }
     ],
     topings: [
-      { name: "Ijsbergsla" }, 
-      { name: "Gefrietuurde uitjes" }, 
+      { name: "Ijsbergsla" },
+      { name: "Gefrietuurde uitjes" },
       { name: "Augurk" },
       { name: "Kaas" }
     ],
@@ -197,17 +259,17 @@ export const recipes: Recipe[] = [
   {
     name: "Pita met Gehaktballen",
     inventors: ["Anouk Nobel", "Wouter Pennings"],
-    img_path: ["food/no_img.png"],
+    img_path: ["food/pita_meatballs.png"],
     main_ingredients: [
-      { name: "Pita broodje" }, 
-      { name: "Gehaktballen", options: ["Aziatisch", "Gewoon", "Vega"] }, 
+      { name: "Pita broodje" },
+      { name: "Gehaktballen", options: ["Aziatisch", "Gewoon", "Vega"] },
       { name: "Knoflook saus" }
     ],
     topings: [
-      { name: "Ijsbergsla" }, 
-      { name: "Komkommer" }, 
+      { name: "Ijsbergsla" },
+      { name: "Komkommer" },
       { name: "Rode ui" },
-      { name: "Tomaat" }, 
+      { name: "Tomaat" },
       { name: "Augurk" }
     ],
     vegan: false,
@@ -224,15 +286,15 @@ export const recipes: Recipe[] = [
     inventors: ["Wouter Pennings"],
     img_path: ["food/pita_falafel.jpg"],
     main_ingredients: [
-      { name: "Pita broodje" }, 
-      { name: "Falafel" }, 
+      { name: "Pita broodje" },
+      { name: "Falafel" },
       { name: "Knoflook saus" }
     ],
     topings: [
-      { name: "Ijsbergsla" }, 
-      { name: "Komkommer" }, 
+      { name: "Ijsbergsla" },
+      { name: "Komkommer" },
       { name: "Rode ui" },
-      { name: "Tomaat" }, 
+      { name: "Tomaat" },
       { name: "Augurk" }
     ],
     vegan: true,

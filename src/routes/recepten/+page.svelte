@@ -2,6 +2,15 @@
     import Recipecard from "$lib/Recipecard.svelte";
     import { recipes } from "$lib/Recipe";
     import Backbtn from "$lib/Backbtn.svelte";
+
+    const shuffle = ([...arr]) => {
+        let m = arr.length;
+        while (m) {
+            const i = Math.floor(Math.random() * m--);
+            [arr[m], arr[i]] = [arr[i], arr[m]];
+        }
+        return arr;
+    };
 </script>
 
 
@@ -32,7 +41,7 @@
     Toevoegingen? Meld bij de <a href="/idee">de beheerder</a>
     <br><br>
     
-    {#each recipes as recipe}
+    {#each shuffle(recipes) as recipe}
         <Recipecard recipe={recipe}></Recipecard>  
     {/each}
 

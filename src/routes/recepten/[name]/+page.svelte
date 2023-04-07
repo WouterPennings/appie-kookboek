@@ -110,7 +110,7 @@
     </ul>
 
     {#if recipe.description != undefined}
-        <h3>Uitleg</h3>
+        <h3>Beschrijving</h3>
         {#if Array.isArray(recipe.description)}
             {#each recipe.description as paragraph}
                 <p>{paragraph}</p>
